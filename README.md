@@ -1,43 +1,64 @@
-# XML files in /xml
 
-## Overview
-Collection of XML documents used by this project. This README describes purpose, validation, editing and contribution guidelines so the files can be used and maintained on GitHub.
+## 🌡️ XML → SVG Animated Temperature Graph
 
-## File structure
-- Place your XML files in this directory (`/xml`).
-- Typical names: `*.xml`; supporting schemas: `*.xsd`, `*.dtd`, `*.rng`.
+A small project that transforms meteorological data written in XML into an animated SVG graph using XSLT.
+The goal is to visualize city temperatures in a simple, dynamic, and browser-friendly way.
 
-(Replace with the actual filenames present in the folder.)
+## 📁 Project Structure
+File	Description
+meteo2.xml	Contains the list of cities and their temperatures.
+meteo2.xsl	XSLT stylesheet that converts the XML data into an animated SVG bar chart.
 
-## Purpose
-Briefly document what each XML represents (examples):
-- config.xml — application configuration
-- data.xml — serialized data records
-- schema.xsd — XML Schema defining structure and types
+## 🎨 What the XSLT Generates
 
-## Validation
-Validate against an XSD or DTD before committing.
+✔️ SVG bar chart
+✔️ Each bar = one city
+✔️ Height = temperature
+✔️ Simple animation using <animate>
+✔️ Fully generated from the XML data
 
-Examples:
-- xmllint (Linux/macOS/Cygwin):
-    xmllint --noout --schema schema.xsd file.xml
-- Python (lxml):
-    from lxml import etree
-    schema = etree.XMLSchema(etree.parse('schema.xsd'))
-    schema.assertValid(etree.parse('file.xml'))
+## 🚀 How to Use
+## 1️⃣ Preview directly in the browser
+Add this at the top of meteo2.xml:
 
-## Editing / Tools
-Recommended editors: VS Code (XML extension), Oxygen, Notepad++.
-Enable schema association for linting and autocompletion.
+<?xml-stylesheet type="text/xsl" href="meteo2.xsl"?>
 
-## Contributing
-- Add or update XML only with clear intent in the commit message.
-- Run validation locally before creating a PR.
-- Include test data or examples when structure changes.
 
-## License
-Add a LICENSE file at repository root; otherwise default to repository license.
+Then open the XML file with Firefox or run a small server and open the file through it:
 
-## Notes for repository owners
-- Update this README to list actual filenames and a short description for each file.
-- Add CI steps to validate XML on push (use xmllint or a small Python script).
+python -m http.server
+
+## 1️⃣ Preview directly in the browser
+
+Add this at the top of meteo2.xml:
+
+``<?xml-stylesheet type="text/xsl" href="meteo2.xsl"?>``
+
+
+Then open the XML file with Firefox or run a small server and open the file through it:
+
+``python -m http.server``
+
+# 2️⃣ Generate a standalone SVG file
+
+If you prefer to export the final graph:
+
+``xsltproc -o meteo.svg meteo2.xsl meteo2.xml``
+
+
+You can then open ``meteo.svg`` in any browser.
+
+## 🎯 Purpose of the Project
+
+This mini-project demonstrates how to:
+
+Structure data using XML
+
+Transform XML with XSLT
+
+Produce graphics using SVG
+
+Apply basic SVG animations without JavaScript
+
+Perfect for academic work, XML/XSLT exercises, or simple data visualization demos.
+
