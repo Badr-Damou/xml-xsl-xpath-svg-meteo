@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meteo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="meteo.xsd">
+    <mesure date="2025-11-15">
+        <ville nom="al qods" temperature="24"/>
+        <ville nom="beijing" temperature="26"/>
+        <ville nom="cairo" temperature="30"/>
+        <ville nom="doha" temperature="35"/>
+        <ville nom="Havana" temperature="29"/>
+        <ville nom="Kyiv" temperature="12"/>
+        <ville nom="London" temperature="14"/>
+        <ville nom="Oslo" temperature="13"/>
+        <ville nom="Paris" temperature="18"/>
+        <ville nom="Rabat" temperature="26"/>
+    </mesure>
+    <mesure date="2025-11-16">
+        <ville nom="al qods" temperature="26"/>
+        <ville nom="beijing" temperature="28"/>
+        <ville nom="cairo" temperature="33"/>
+        <ville nom="doha" temperature="35"/>
+        <ville nom="Havana" temperature="27"/>
+        <ville nom="Kyiv" temperature="11"/>
+        <ville nom="London" temperature="15"/>
+        <ville nom="Oslo" temperature="12"/>
+        <ville nom="Paris" temperature="19"/>
+        <ville nom="Rabat" temperature="26"/>
+    </mesure>
+</meteo>
